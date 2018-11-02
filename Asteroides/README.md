@@ -1,6 +1,6 @@
 
 
-Este es un ejemplo sencillo de asteroides que al colisionar forman pequeños asteroiedes y desaparecen.
+Este es un ejemplo sencillo de asteroides que al colisionar forman pequeños asteroides y desaparecen.
 
 Desarrollado en Ubuntu 17.10 con la biblioteca *X11 GFX*
 
