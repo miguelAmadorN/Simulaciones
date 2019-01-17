@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Suma de Vectores</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' href='css/stilo.css'>
+        <script src="FrameWorks/fabric.min.js"></script>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <div id="OPCIONES">
+            <p id="demo"></p>
+            
+            <p id="R"><b>|R|</b></p> <p id="Angulo"><b>θ</b></p> <p id="Rx"><b>Rx</b></p> <p id="Ry"><b>Ry</b></p><br><br>
+            
+            <form name="Resultados">
+                <b> Mostrar Suma</b><input id="suma" type="checkbox" name="Suma" onClick="mostrarVectorSuma(this)">
+                <br/>
+                <br/>
+                <b> Mostrar Componente</b>
+                <br/>
+                Ninguno <input id="ninguno" type="checkbox" name="Ninguno" onClick="estilo(this)" checked > <br/>
+                Estilo 1 <input id="e1" type="checkbox" name="e1" onClick="estilo(this)"> <br/>
+                Estilo 2 <input id="e2" type="checkbox" name="e2" onClick="estilo(this)"> <br/>
+                Estilo 3 <input id="e3" type="checkbox" name="e3" onClick="estilo(this)"> <br/>
+                <br/>
+                <br/>
+                <br/>
+                Cuadricula <input id="cuadricula" type="checkbox" name="Cuadricula" onClick="cuadricular(this)"> <br/>
+                
+            </form>
+        </div>
+
+        <div id="FUNCIONAMIENTO">
+             <canvas id="CANVAS1" height="600" width="1200"></canvas>  
+             <img style="visibility:hidden;" src="elementos/boteCerrado.png" id="boteCerrado">
+             <img style="visibility:hidden;" src="elementos/boteAbierto.png" id="boteAbierto">
+             <img style="visibility:hidden;" src="elementos/nuevoVector.png" id="nuevoVector">
+             
+            <script type="text/javascript" src="codigo.js"> </script>
+        </div>
+    </body>
+</html>
+
