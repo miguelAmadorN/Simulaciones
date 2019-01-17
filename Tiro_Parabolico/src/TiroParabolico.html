@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+    POSICION EN x= Vo Cos(a) t
+    POSICION EN Y= Vo Sen(a) t -g t²/2
+    TIEMPO TOTAL DE VUELO -1/2gt²-tSen(a)Vo+h
+    
+    GRAVEDAD Segun el Resnick pag 201 g=GMt/r²
+        donde:
+            G=6.67259 * 10-¹¹ Nm²/kg²
+            Mt--Masa de la Tierra: 5.98 * 10²⁴ kg
+            r= radio de la tierra: 6.37 * 10⁶ m
+-->
+<html>
+    <head>
+        <title>Tiro Parabolico</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' href='css/fuentes.css'>
+        <script src="frameworks/fabric.min.js"></script>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <audio  id="a">
+            <source src="elementos/Cohete.mp3" type="audio/mpeg">
+            Your browser does not support the video tag.
+        </audio> 
+
+        <div id="OPCIONES">
+
+            <form name="Resultados">
+                <b> Range(m)</b><input type="text" name="Range" value ="0" id="range" readonly><br/>
+                <b> Heigth(m)</b><input type="text" name="Height" value ="0" id="height" readonly><br/>
+                <b> Time(s)</b><input type="text" name="Time" value ="0" id="time" readonly>
+                <br>
+                <br/>
+                <br/>
+            </form>
+            <br>
+            <form name="Valores">
+                <b> Angle(degrees)</b><input type="number" name="Angle" value ="0" id="angle" onclick="moverGrados(this)"><br/><br/>
+                <b> Initial speed(m/s)</b><input type="number" name="Speed" value ="18" id="speed"><br/><br/>
+                <b> Mass (kg)</b><input type="number" name="Mass" value ="2"><br/><br/>
+                <b> Diameter(m)</b><input type="number" name="Diameter" value ="1" onClick="tamProyectil(this)"><br/><br/>
+                <input type="checkbox" name="Air" onClick="optionsAir(this)" id="air" > <b> Air Resistence</b>
+                <br/>
+                <p id="Drag" style="visibility:hidden;"> <b>Drag coeffient</b> <input type="number" name="drag" value="0" > </p>
+                <p id="Altitud" style="visibility:hidden;"><b> Altitude (m)</b> <input type="number" name="altitude" value="0" id="altitud"> </p>
+                <br/>
+                <br/>
+                <input type="button" value="Zoom (+)" onClick="aumentar()" name="ZoomA">
+                <input type="button" value="Zoom (-)" onClick="disminuir()" name="ZoomD">
+                <br/>
+                <br/>
+                <input type="button" value="FIRE" onClick="mueve()">
+                <input type="button" value="ERASE" onClick="restablecer() ">
+            </form>
+            <br/>
+            <input type="checkbox" name="Sound" id="audio"> <b> Sound</b>
+            <br/>
+            <p id="demo"></p>
+        </div>
+
+        <div id="FUNCIONAMIENTO">
+            <canvas id="CANVAS1" height="600" width="1000"></canvas>
+            <img style="visibility:hidden;" src="elementos/canion.png" id="imagen1">
+            <img style="visibility:hidden;" src="elementos/rueda.png" id="imagen2">
+            <script type="text/javascript" src="codigo.js"> </script>
+        </div>
+    </body>
+</html>
