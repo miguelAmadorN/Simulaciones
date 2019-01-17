@@ -8,4 +8,4 @@ la resistencia del aire y la altitud.
 
 Ejemplo de ejecución
 
-![Ejemplo 1](../Tiro_Parabolico/Imagen1.png)
+![Ejemplo 1](../Tiro_Parabolico/Imagen.png)
