@@ -9,10 +9,10 @@ Desarrollado en Ubuntu 17.10 con la biblioteca *X11 GFX*
 
 Compilar desde terminal con archivo Makefile:
 
-**Compilar:**
+**Compilar desde terminal:**
 	make
 
-**Limpiar:**
+**Limpiar desde terminal:**
 	make clean
 
 Ejemplo de ejecución
